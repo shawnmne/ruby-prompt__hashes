@@ -9,6 +9,8 @@ A Hash is a collection of key-value pairs like this: "employee" => "salary". It 
 
 # What are some examples of information that would be Hashes as opposed to some other data type?
 
+The cat hash below is a great example of a hash.  The key is not and can not be an integer and therefore an array would not work as a data type.  The key here is the hair type of a cat. 
+The corresponding value to each key represents the breed of the cat.
 cats = Hash.new
 cats[:longhair] = "persian"
 cats[:shorthair] = "siamese"
@@ -29,7 +31,12 @@ cats[:bald] = "sphynx"
 
 # How would you perform an operation on every element inside a Hash?
 
-It appears there is no clean way to do so.
+It appears there is no clean way to do so but can use .each method
+
+cats.each { |key, value| puts "My #(key} cat is a #{value}."}  outputs
+My longhair cat is a persian.
+My shorthair cat is a siamese.
+My bald cat is a sphynx.
 
 # How would you change the value of a particular element in a Hash?
 
